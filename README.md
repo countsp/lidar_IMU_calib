@@ -22,6 +22,7 @@ Note that **Kontiki** and **Pangolin** are included in the *thirdparty* folder.
 
 ## Install
 
+
 Clone the source code for the project and build it.
 
 ```shell
@@ -40,6 +41,9 @@ wstool update
 # Pangolin
 cd lidar_imu_calib_beta
 ./build_submodules.sh
+
+打开 /home/****/li_calib/src/ndt_omp/ 下的 CMakeLists.txt 文件，在第三行改为 set(CMAKE_CXX_FLAGS "-std=c++14")
+
 ## build
 cd ../..
 catkin_make
