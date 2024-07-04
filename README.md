@@ -138,3 +138,6 @@ Jiajun Lv, Jinhong Xu, Kewei Hu, Yong Liu, Xingxing Zuo. Targetless Calibration 
 ## License
 
 The code is provided under the [GNU General Public License v3 (GPL-3)](https://www.gnu.org/licenses/gpl-3.0.txt).
+
+## 32线适配
+https://blog.csdn.net/weixin_46416017/article/details/120316198
