@@ -28,24 +28,31 @@ Clone the source code for the project and build it.
 ```shell
 # init ROS workspace
 mkdir -p ~/catkin_li_calib/src
-cd ~/catkin_li_calib/src
+cd ~/lidar_imu_calib/src
 catkin_init_workspace
 
 # Clone the source code for the project and build it. 
 git clone https://github.com/APRIL-ZJU/lidar_IMU_calib
 
 # ndt_omp
+sudo apt install python3-wstool
 wstool init
 wstool merge lidar_IMU_calib/depend_pack.rosinstall
 wstool update
+
 # Pangolin
 cd lidar_imu_calib_beta
 ./build_submodules.sh
+```
 
-打开 /home/****/li_calib/src/ndt_omp/ 下的 CMakeLists.txt 文件，在第三行改为 set(CMAKE_CXX_FLAGS "-std=c++14")
+打开 src/ndt_omp/ 下的 CMakeLists.txt 文件，在第三行改为 set(CMAKE_CXX_FLAGS "-std=c++14")
 
+**安装依赖**
+sudo apt install ros-noetic-velodyne-msgs
+
+```
 ## build
-cd ../..
+cd catkin_ws/lidar_imu_calib/
 catkin_make
 source ./devel/setup.bash
 ```
